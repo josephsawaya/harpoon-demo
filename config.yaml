@@ -1,9 +1,10 @@
 volume: harpoon-volume # this needs to match the volume name passed to the podman run command
 targets:
 - name: harpoon
-  url: http://github.com/josephsawaya/harpoon-demo
-  kube:
-    targetPath: example.yaml
-    schedule: "*/1 * * * *"
+  url: http://github.com/josephsawaya/harpoon-demo.git
+  methods:
+    kube:
+      targetPath: kube 
+      user: root
+      schedule: "*/1 * * * *"
   branch: main
-  
